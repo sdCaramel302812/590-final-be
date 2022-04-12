@@ -4,8 +4,16 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@aws-sdk/client-opensearch": "^3.67.0",
+    "@fluent-org/logger": "^1.0.2",
+    "@opensearch-project/opensearch": "^1.1.0",
+    "aws-opensearch-connection": "^3.0.0",
+    "aws-sdk": "^2.1112.0",
     "dotenv": "^16.0.0",
-    "express": "^4.17.3"
+    "elasticsearch": "^16.7.3",
+    "express": "^4.17.3",
+    "http-aws-es": "^6.0.0",
+    "node-cron": "^3.0.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",

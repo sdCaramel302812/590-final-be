@@ -16,5 +16,6 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | b
     && . $NVM_DIR/nvm.sh \
     && nvm install $NODE_VERSION
 RUN npm install
+RUN npm run build
 
 ENTRYPOINT ["npm", "start"]
