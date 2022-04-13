@@ -5,6 +5,7 @@ COPY . /home
 EXPOSE 3030
 
 RUN mkdir /root/.nvm
+RUN mkdir /root/.aws
 
 ENV NVM_DIR   /root/.nvm
 ENV NODE_VERSION 14.18.0
@@ -17,5 +18,7 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | b
     && nvm install $NODE_VERSION
 RUN npm install
 RUN npm run build
+
+CMD ["/bin/sh", "./set-credentials.sh"]
 
 ENTRYPOINT ["npm", "start"]
